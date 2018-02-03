@@ -36,8 +36,8 @@ function InstallOMS() {
 function InstallSF() {
   echo '' > /etc/motd
   echo "${CSUCCESS}[INFO] ${CBLUE}安装screenFetch${CEND}"
-  chmod +x /usr/bin/screenfetch-dev
   cp -r ./include/screenfetch-dev /usr/bin/
+  chmod +x /usr/bin/screenfetch-dev
   cp -r ./include/logo.sh /etc/profile.d/
 }
 
