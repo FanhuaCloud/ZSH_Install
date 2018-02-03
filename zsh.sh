@@ -22,6 +22,7 @@ function Settimezone() {
 function InstallZSH() {
   echo "${CSUCCESS}[INFO] ${CBLUE}安装ZSH${CEND}"
   yum -y install git zsh
+  yum -y groupinstall "Development Tools"
   chsh -s /bin/zsh
 }
 
