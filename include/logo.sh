@@ -1,1 +1,1 @@
-screenfetch
+screenfetch-dev

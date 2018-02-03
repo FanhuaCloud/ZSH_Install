@@ -30,7 +30,7 @@ function InstallZSH() {
 
 function InstallOMS() {
   echo "${CSUCCESS}[INFO] ${CBLUE}安装oh-my-zsh${CEND}"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh;exit)"
 }
 
 function InstallSF() {
