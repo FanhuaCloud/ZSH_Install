@@ -10,5 +10,8 @@ cd ZSH_Install-master
 ./zsh.sh
 ```
 
+## 安装完成预览
+![](https://s1.ax1x.com/2018/02/03/9Z7FaT.png)
+
 ## oh-my-zsh主题查看
 https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
