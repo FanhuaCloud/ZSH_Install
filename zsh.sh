@@ -5,7 +5,7 @@
 
 #关闭selinux
 function Coloseselinux() {
-  echo "${CSUCCESS}[INFO]${CBLUE}关闭SELINUX${CEND}"
+  echo "${CSUCCESS}[INFO] ${CBLUE}关闭SELINUX${CEND}"
   [ -s /etc/selinux/config ] && sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 setenforce 0 >/dev/null 2>&1
 }
@@ -24,7 +24,7 @@ function Settimezone() {
 function InstallZSH() {
   echo "${CSUCCESS}[INFO] ${CBLUE}安装ZSH${CEND}"
   yum -y install git zsh
-  yum -y groupinstall "Development Tools"
+  yum -y groupinstall "Development tools"
   chsh -s /bin/zsh
 }
 
@@ -36,12 +36,13 @@ function InstallOMS() {
 function InstallSF() {
   echo '' > /etc/motd
   echo "${CSUCCESS}[INFO] ${CBLUE}安装screenFetch${CEND}"
+  chmod +x /usr/bin/screenfetch-dev
   cp -r ./include/screenfetch-dev /usr/bin/
   cp -r ./include/logo.sh /etc/profile.d/
 }
 
 Coloseselinux
 Settimezone
+InstallSF
 InstallZSH
 InstallOMS
-InstallSF
