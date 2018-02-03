@@ -12,6 +12,8 @@ setenforce 0 >/dev/null 2>&1
 
 #设置时区并同步时间
 function Settimezone() {
+  echo "${CSUCCESS}[INFO] ${CBLUE}安装ntpdate${CEND}"
+  yum -y install ntpdate
   echo "${CSUCCESS}[INFO] ${CBLUE}设置服务器时区${CEND}"
   rm -rf /etc/localtime
   ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
