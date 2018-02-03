@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd ~ # 返回用户目录
 . ./include/color.sh # 设置颜色
 . ./include/memory.sh # 增加虚拟内存
 
