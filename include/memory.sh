@@ -48,7 +48,7 @@ if [ "$Swap" == '0' ]; then
   if [ $Mem -le 1024 ]; then
     COUNT=1024
     Make-swapfile
-  elif [ $Mem -gt 1024 -a $Mem -le 2048 ]; then
+  elif [ $Mem -gt 1024 ]; then
     COUNT=2048
     Make-swapfile
   fi
